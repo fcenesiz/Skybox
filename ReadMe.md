@@ -1,6 +1,5 @@
 ### Gradient Color Skybox, easy to add and apply!
 
-### Example
 ![](skybox.gif )
 
 ## Usage
