@@ -1,5 +1,8 @@
 ### Gradient Color Skybox, easy to add and apply!
 
+### Example
+![](skybox.gif )
+
 ## Usage
 
 ### create
@@ -37,5 +40,4 @@ public void create(){
 
 ```
 
-### Example
-![](skybox.gif )
+
