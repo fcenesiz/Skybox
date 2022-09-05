@@ -1,3 +1,4 @@
+
 buildscript {
     
 
@@ -14,8 +15,10 @@ buildscript {
     }
 }
 
+
 allprojects {
     apply plugin: "eclipse"
+
 
     version = '1.0'
     ext {
@@ -37,14 +40,20 @@ allprojects {
         maven { url "https://oss.sonatype.org/content/repositories/releases/" }
         maven { url "https://jitpack.io" }
     }
+
+
+
 }
 
 project(":core") {
     apply plugin: "java-library"
-
-
     dependencies {
         api "com.badlogicgames.gdx:gdx:$gdxVersion"
         
     }
 }
+
+
+
+
+
