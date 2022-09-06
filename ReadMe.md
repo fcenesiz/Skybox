@@ -29,9 +29,7 @@ public void update(float deltaTime){
 ### render
 
 ```
-private Skybox skybox;
-
-public void create(){
+public void render(ModelBatch batch){
     ...
     skybox.render(batch); // skybox.render(batch, envirounment);
     ...
