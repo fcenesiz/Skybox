@@ -11,7 +11,12 @@ private Skybox skybox;
 
 public void create(){
     ...
-    skybox = new Skybox(camera, Color.CYAN, Color.YELLOW, 500);
+    skybox = new Skybox(
+        camera, // game camera
+        Color.CYAN, // top color
+        Color.YELLOW, // bottom color
+        500 // scale
+    );
     ...
 }
 
