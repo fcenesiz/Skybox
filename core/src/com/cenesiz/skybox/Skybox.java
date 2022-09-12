@@ -9,8 +9,9 @@ import com.badlogic.gdx.graphics.g3d.attributes.IntAttribute;
 import com.badlogic.gdx.graphics.g3d.utils.MeshPartBuilder;
 import com.badlogic.gdx.graphics.g3d.utils.ModelBuilder;
 import com.badlogic.gdx.math.Vector3;
+import com.badlogic.gdx.utils.Disposable;
 
-public class Skybox {
+public class Skybox implements Disposable {
 
 	private Color colorTop;
 	private Color colorBottom;
@@ -40,23 +41,39 @@ public class Skybox {
 		batch.render(instance, environment);
 	}
 
+	@Override
 	public void dispose() {
 		box.dispose();
 	}
 
-	private void setColors(Color colorTop, Color colorBottom){
+	/**
+	 * it can be used at runtime.
+	 * @param colorTop
+	 * @param colorBottom
+	 */
+	public void setColors(Color colorTop, Color colorBottom){
 		this.colorTop = colorTop;
 		this.colorBottom = colorBottom;
 		box.setColors(colorTop, colorBottom);
 	}
 
-	private void lerpColors(Color colorTop, Color colorBottom, float alpha){
+	/**
+	 * it can be used at runtime.
+	 * @param colorTop
+	 * @param colorBottom
+	 * @param alpha
+	 */
+	public void lerpColors(Color colorTop, Color colorBottom, float alpha){
 		this.colorTop.lerp(colorTop, alpha);
 		this.colorBottom.lerp(colorBottom, alpha);
 		box.setColors(this.colorTop, this.colorBottom);
 	}
 
-	private void setScale(float value) {
+	/**
+	 * it can be used at runtime.
+	 * @param value
+	 */
+	public void setScale(float value) {
 		if (scale == null)
 			scale = new Vector3();
 		scale.set(value, value, value);
