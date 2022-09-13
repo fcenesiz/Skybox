@@ -6,7 +6,7 @@
 
 ### create
 
-```
+```Java
 private Skybox skybox;
 
 public void create(){
@@ -23,7 +23,7 @@ public void create(){
 ```
 ### update
 
-```
+```Java
 public void update(float deltaTime){
     ...
     skybox.update();
@@ -33,7 +33,7 @@ public void update(float deltaTime){
 
 ### render
 
-```
+```Java
 public void render(ModelBatch batch){
     ...
     skybox.render(batch); // skybox.render(batch, envirounment);
@@ -42,4 +42,17 @@ public void render(ModelBatch batch){
 
 ```
 
+#### other
+they can be used at runtime.
+```Java
+setColors(
+    Color.BLACK, // top color
+    Color.BROWN // bottom color
+);
+
+lerpColors(
+        Color.FOREST, // top color
+        Color.GOLD // bottom color
+);
+```
 
